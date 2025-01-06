@@ -1,7 +1,7 @@
 from app import app
 
-@app.route('/') #decorators
-@app.route('/index')
-def index():
-    strResult = 'Hello Bruz!'
-    return strResult
+from flask import render_template
+
+@app.route('/')
+def accueil():
+    return render_template('Accueil.html')
